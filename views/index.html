@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>FileExplorer</title>
+	<link rel="stylesheet" href="static/css/lib/bootstrap.css">
+	<link rel="stylesheet" href="static/css/app/index.css">
+	<script src="static/js/lib/require.js"></script>
+	<script>
+		require(['./static/js/common'], function (common) {
+			require(['bootstrap', '../app/main']);
+		})
+	</script>
+</head>
+<body>
+	<div class="container">
+		<form class="form-horizontal search">
+			<div class="form-group">
+				<label for="input-path"></label>
+				<div class="col-sm-10 col-xs-12">
+					<input type="text" class="input-path form-control" id="input-path" placeholder="Input the path here" autofocus="autofocus">
+				</div>
+				<div class="col-sm-2 button-wrap">
+					<button class="btn btn-default confirm-path" id="confirm-path" type="button">Enter</button>
+				</div>
+			</div>
+		</form>
+
+		<div class="content">
+			<table class="table table-bordered table-hover">
+				<thead>
+					<div class="currentPath-container">
+						<h3 class="currentPath pull-left"></h3>
+						<div class="pull-right">
+							<input id="file" type="file" class="file">  
+							<button class="btn btn-primary" id="upload" type="button">Upload</button>
+							<button class="btn btn-primary" id="create" type="button" data-toggle="modal" data-target="#action-modal" data-action="create">Create</button>
+						</div>
+					</div>
+				</thead>
+				<tbody>
+					<tr>
+						<th>Name</th>
+						<th>Type</th>
+						<th>Size</th>
+						<th>Modify Date</th>
+						<th id="action">Action</th>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+		<div class="modal fade" id="action-modal" tabindex="-1" role="dialog">
+			<div class="modal-dialog" role="document">
+				<div class="modal-content">
+					<div class="modal-header">
+						<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+						<h4 class="modal-title" id="modal-title"></h4>
+					</div>
+					<div class="modal-body">
+						<form class="form-horizontal">
+							<div class="form-group">
+								<label for="action-input" class="col-md-2 control-label"></label>
+								<input type="text" class="form-control action-input" id="action-input" placeholder="Input the file name here" autofocus="autofocus">
+							</div>
+						</form>
+					</div>
+					<div class="modal-footer">
+						<button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+						<button type="button" class="action-confirm btn btn-primary" id="action-confirm">Confirm</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</body>
+</html>

@@ -1,0 +1,37 @@
+.container {
+	margin-top: 50px;
+}
+.content {
+	margin-top: 50px;
+}
+a {
+	cursor: pointer;
+}
+.currentPath-container {
+	overflow: hidden;
+	padding-bottom: 20px;
+}
+.currentPath-container .pull-right {
+	margin-top: 16px;
+}
+input.file {
+	display: none;
+}
+#action {
+	min-width: 180px;
+}
+.modal-delete .modal-header {
+	border-bottom: none;
+}
+.modal-delete .modal-footer {
+	border-top: none;
+}
+.modal-delete .modal-body {
+	visibility: hidden;
+}
+@media (max-width: 768px) {
+	.button-wrap {
+		float: right;
+		margin-top: 10px;
+	}
+}

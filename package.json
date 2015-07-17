@@ -1,0 +1,11 @@
+{
+  "name": "FileExplorer",
+  "version": "0.0.0",
+  "devDependencies": {
+    "body-parser": "~1.13.1",
+    "express": "~4.13.0",
+    "ejs": "~2.3.3",
+    "multer": "0.1.8",
+    "fs-extra": "0.22.1"
+  }
+}

@@ -1,0 +1,7 @@
+{
+	"data": [
+		{"name": "aaa", "type": "file", "size":"200k", "date": "2015-7-13"},
+		{"name": "bbb", "type": "file", "size":"300k", "date": "2015-7-13"},
+		{"name": "ccc", "type": "directory", "date": "2015-7-13"}
+	]
+}
